@@ -23,4 +23,7 @@ urlpatterns = [
     path("", views.hello_budget, name="home"),
     path("admin/", admin.site.urls),
     path("api/hello/", views.hello_budget, name="hello_budget"),
+    path(
+        "api/categories/", views.CategoryListAPIView.as_view(), name="categories-list"
+    ),
 ]
